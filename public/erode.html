@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Bus Tracking</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://unpkg.com/@turf/turf@7"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .bus-marker {
+            width: 38px;
+            height: 38px;
+            background-image: url('img/1.png');
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        .current-location-marker {
+            width: 28px;
+            height: 28px;
+            background-image: url('img/3.png'); /* Updated image for current location */
+            background-size: cover;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7.0.0/turf.min.js"></script>
+    <script src="https://unpkg.com/@turf/turf@7"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.25.0/axios.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
