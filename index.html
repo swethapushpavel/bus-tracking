@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KEC Bus Livo</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+  body {
+  background-image: linear-gradient(rgb(25, 25, 25), rgba(6, 6, 6, 0.5)), url('bus.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f8f3f3;
+}
+
+ul {
+  list-style-type: none; /* Remove the bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+li {
+  cursor: pointer;
+}
+
+.filter-icon {
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container text-center">
+    <img src="1.png" alt="KEC Bus Livo Logo" style="width: 150px; height: 150px;">
+    <h1>KEC Bus Livo</h1>
+    <h2>Select Route</h2>
+    <div class="filter-icon" onclick="toggleCityList()">Filter &#9660;</div>
+    <ul id="cityList" style="display: none;">
+      <li onclick="navigateTo('/erode')">Erode</li>
+      <li onclick="navigateTo('/coimbatore')">Coimbatore</li>
+      <li onclick="navigateTo('/tirupur')">Tirupur</li>
+      <li onclick="navigateTo('/perundurai')">Perundurai</li>
+    </ul>
+  </div>
+  
+  <script>
+    function toggleCityList() {
+      var cityList = document.getElementById('cityList');
+      cityList.style.display = cityList.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function navigateTo(city) {
+      window.location.href = city;
+    }
+  </script>
+</body>
+</html>
